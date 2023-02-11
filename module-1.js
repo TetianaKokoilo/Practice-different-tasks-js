@@ -110,59 +110,40 @@ console.log(undefined == null); //true
 
 console.log(undefined === null); //false
 
-// Використовуючи конструкцію if..else та prompt, напиши код, який запитуватиме: 
+// Використовуючи конструкцію if..else та prompt, напиши код, який запитуватиме:
 // "Яка офіційна назва JavaScript?".Якщо користувач вводить ECMAScript, то показуй alert з рядком "Вірно!", інакше - "Не знаєте? ECMAScript!"
 
-// const value = prompt("Яка офіційна назва JavaScript?").toLocaleLowerCase()
-// const ecma = 'ECMAScript'
+// const call = prompt("Яка офіційна назва JavaScript").toLowerCase();
+// const callName = 'ECMAScript'.toLowerCase();
 
-// if(value === ecma.toLocaleLowerCase()){
-//     alert("Вірно!")
-// }else{
-//     alert("Не знаєте? ECMAScript!")
+// if (call === callName) {
+//   alert('Вірно!');
+// } else {
+//   alert('Не знаєте? ECMAScript!');
 // }
+
 
 // Напиши скрипт, який виводить у консоль рядок "Це позитивне число", якщо в prompt користувач ввів число більше за нуль. Якщо було введено нуль, виводь у консоль рядок "Це нуль". Якщо передали від'ємне число, у консолі має бути рядок "Це від'ємне число".
-// const value = Number(prompt('Enter number'))
-// console.log(value);
-// console.log(typeof value);
 
-// if (value > 0) {
-//     console.log("Це позитивне число");
-// } else if (value === 0) {
-//     console.log("Це нуль");
-// } else if (value < 0) {
-//     console.log("Це від'ємне число");
+// const ask = Number(prompt('Please, write nubmer!'));
+// if (ask > 0) {
+//   console.log('Це позитивне число');
+// } else if (ask === 0) {
+//   console.log('Це нуль');
+// } else if (ask < 0) {
+//   console.log("Це від'ємне число");
 // } else {
-//     console.log('Ви ввели не число');
+//   console.log('Це не число.')
 // }
 
-// if (value > 0) {
-//     console.log("Це позитивне число");
-// }
-// if (value === 0) {
-//     console.log("Це нуль");
-// }
-// if (value < 0) {
-//     console.log("Це від'ємне число");
-// }
-// if (isNaN(value)) {
-//     console.log('Ви ввели не число');
-// }
 
 // Напиши скрипт який перевіряє чи закінчується значення змінної link символом /. Якщо ні, додай до кінця значення link цей символ
 // let link = 'https://somesite.com/about';
-
-// console.log(link.slice(link.length-1) === '/');
-
-// console.log(link.endsWith('/'));
-// console.log(!false);
 // if (!link.endsWith('/')) {
-//     // link = `${link}/`
-//     // link = link + '/'
-//     link += '/'
+//   link += '/';
 // }
 // console.log(link);
+
 
 // Напиши скрипт для відображення часу дедлайн здачі проекту. Використовуй конструкцію if...else.
 
@@ -171,46 +152,31 @@ console.log(undefined === null); //false
 // Якщо до дедлайну 2 дні - виведи рядок "Післязавтра"
 // Якщо до дедлайну 3+ днів - виведи рядок "Дата в майбутньому"
 
-// console.log(typeof days);
-// if(days === 0){
-//     console.log("Сьогодні");
-// }else if (days === 1){
-//     console.log("Завтра");
-// }else if (days === 2){
-//     console.log("Післязавтра");
-// }else {
-//     console.log("Дата в майбутньому");
-// }
-// const days = Number(prompt('Enter days'))
-// // console.log(isNaN(days) || Number.isNaN(days));
-// console.log(days);
+const deadline = 0;
+let messageDeadline = '';
+if (deadline === 0) {
+  messageDeadline = 'Сьогодні';
+} else if (deadline === 1) {
+  messageDeadline = 'Завтра';
+} else if (deadline === 2) {
+  messageDeadline = 'Післязавтра';
+} else if (deadline >= 3) {
+  messageDeadline = 'Дата в майбутньому';
+} 
 
-// switch (days) {
-//     case 0:
-//         console.log("Сьогодні");
-//         break;
-//     case 1:
-//         console.log("Завтра");
-//         break;
-//     case 2:
-//         console.log("Післязавтра");
-//         break;
-//     default:
-//         console.log("Дата в майбутньому");
-// }
+console.log(messageDeadline);
+
+
 
 // Напиши цикл for який виводить у консоль браузера числа за зростанням від min до max, але якщо число кратне 5.
-// const max = 100;
-// const min = 20;
+const max = 100;
+const min = 20;
+for (let i = min; i <= max; i += 1) {
 
-// for (let i = min; i <= max; i += 1) {
-//     console.log(i);
-//     // / оператор ділення
-//     // % оператор залишку від ділення
-//     // if (i % 5 === 0){
-//     //     console.log(i);
-//     // }
-// }
+  if (i % 5 === 0)
+    console.log(i);
+}
+
 
 // Створи світлофор
 
