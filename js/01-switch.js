@@ -44,7 +44,7 @@ switch (starts) {
         console.log('Такого кол-ва звезд нет');
         break;
 }
-console.log('Price', price);
+// console.log('Price', price);
 /*
  * Напиши скрипт выбора стоимости отеля по кол-ву звёзд.
  * 1,2 - 20$, 3,4 - 30$, 5 - 120$
